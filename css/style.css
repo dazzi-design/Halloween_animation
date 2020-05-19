@@ -1,0 +1,185 @@
+/* style.css */
+*{margin: 0 auto; padding: 0;}
+html {height: 100%;}
+body {
+    height: 100%;
+}
+/* 웹폰트 선언하기 */
+@font-face {
+    font-family: 'csnpwdt NFI';
+    src: url('../font/csnpwdt\ NFI.ttf');
+}
+section{
+    background: #0E2338;
+    margin-top: 10px;
+    width: 751px; height: 500px;
+    /* outline: 1px solid red; */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+/* 타이틀 */
+#title {
+    z-index: 1;
+    position: absolute;
+    /* text-align: center; */
+    left: 180px;
+    bottom: 30px;
+    color: yellow;
+    font-size: 90px;
+    font-weight: 500;
+    font-family: 'csnpwdt NFI',cursive;
+    /* outline: 1px solid pink; */
+}
+
+/* 왼쪽 구름 */
+#cloud_left {
+    position: absolute;
+    top: 30px;
+    float: left;
+}
+#cloud_left img {
+    display: block;
+    margin: 0;
+}
+#cloud_left img:nth-child(2){
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+/* 오른쪽 구름 */
+#cloud_right {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    float: right;
+}
+#cloud_right img {
+    display: block;
+}
+#cloud_right img:first-child{
+    margin-right: 100px;
+}
+#cloud_right img:nth-child(2){
+    margin-right: -50px;
+    margin-top: -30px;
+}
+#cloud_right img:last-child{
+    margin-top: -30px;
+    margin-right: 10px;
+}
+
+/* 달 */
+#moon {
+    /* z-index: -1; */
+    /* outline: 1px solid pink; */
+    position: absolute;
+    top: -70px; left: 180px;
+    display: inline;
+}
+
+/* 땅 */
+
+#ground {
+    z-index: -1;
+}
+#ground img {
+    position: absolute;
+    transform: scale(0.8);
+    left: -94px; bottom: -170px;
+    /* outline: 1px solid red; */
+    display: block;
+    filter: drop-shadow(5px 5px 8px rgba(255, 255, 0, 0.548));
+}
+
+/* 마녀 */
+#witch{
+    /* width: 751px; height: 500px; */
+    position: absolute;
+    /* outline: 1px solid blue; */
+    /* z-index: 3; */
+}
+#witch img {
+    filter: drop-shadow(5px 5px 8px rgba(255, 255, 0, 0.548));
+}
+
+/* #witch2 img  {
+    transform: rotatey(180deg);
+    filter: drop-shadow(5px 5px 8px rgba(0, 255, 136, 0.548));
+} */
+
+
+
+
+/* 타이틀 애니메이션 */
+#title {
+    animation-name: title;
+    animation-duration: 5.0s;
+    animation-iteration-count: infinite;
+}
+@keyframes title {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* 마녀 애니메이션 */
+#witch{
+    animation-name: witch;
+    animation-duration: 8.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in; /*이동속도 설정*/
+}
+
+@keyframes witch {
+    0% {
+        left: 0; bottom: 0;
+    }
+    25% {
+        left: 900px; bottom: 600px;
+    }
+    50% {
+       
+        bottom: -300px; right:-600px;
+    }
+    100% {
+        transform: rotate(30deg) scaleX(-2);
+        
+        right : 900px; bottom: 600px;
+    }
+}
+
+
+
+
+
+/* #witch2{
+    animation-name: witch2;
+    animation-duration: 4.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+@keyframes witch2 {
+    0% {
+        right: 0; bottom: 0; opacity: 1;
+    }
+    20% {
+        right: 20%; bottom: 20%;
+    }
+    40% {
+        right: 40%; bottom: 40%;
+    }
+    60% {
+        right: 60%; bottom: 60%;
+    }
+    100% {
+        left: 0; bottom: 100%;; opacity: 0;
+    }
+} */
+
